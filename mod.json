@@ -1,0 +1,53 @@
+{
+	"geode": "4.0.0",
+	"gd": {
+		"android": "2.2081"
+	},
+	"id": "user.auto-layout",
+	"name": "Auto Layout",
+	"version": "v1.1.0",
+	"developer": "You",
+	"description": "Автоматически строит простой лайаут под музыку (по BPM и длине) прямо в редакторе.",
+	"settings": {
+		"auto-detect": {
+			"type": "bool",
+			"name": "Определять BPM и длину автоматически",
+			"description": "Анализирует скачанный файл песни по ID. Песня должна быть уже скачана в игре. Если выключено или анализ не удался, берутся BPM и длина ниже.",
+			"default": true
+		},
+		"song-id": {
+			"type": "int",
+			"name": "ID песни",
+			"description": "ID песни с Newgrounds (Music Library). Она будет установлена в уровень.",
+			"default": 0,
+			"min": 0
+		},
+		"bpm": {
+			"type": "float",
+			"name": "BPM (вручную)",
+			"description": "Темп песни (ударов в минуту).",
+			"default": 120.0,
+			"min": 40.0,
+			"max": 300.0
+		},
+		"length": {
+			"type": "float",
+			"name": "Длина песни, сек (вручную)",
+			"description": "Сколько секунд строить лайаут.",
+			"default": 60.0,
+			"min": 10.0,
+			"max": 300.0
+		},
+		"density": {
+			"type": "int",
+			"name": "Плотность",
+			"description": "1 — редко, 2 — средне, 3 — часто.",
+			"default": 2,
+			"min": 1,
+			"max": 3,
+			"control": {
+				"slider": true
+			}
+		}
+	}
+}
